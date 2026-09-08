@@ -19,7 +19,8 @@ nuevo issn: unIssn titulo: unTitulo autores: unosAutores editorial: unaEditorial
 ]
 
 { #category : 'as yet unclassified' }
-Revista >> codigo [ ^issn, '-',numero asString.
+Revista >> codigo [ 
+^issn, '-',numero asString.
 
 ]
 

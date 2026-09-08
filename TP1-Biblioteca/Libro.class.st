@@ -14,24 +14,51 @@ Class {
 
 { #category : 'initialization' }
 Libro class >> isbn: unIsbn titulo: unTitulo autores: unAutor editorial: unaEditorial anio: unAnio paginas: cantPaginas [
-|l|
-l := self new.
-l setIsbn: unIsbn setTitulo: unTitulo setAutores: unAutor setEditorial: unaEditorial setAnio: unAnio setPaginas: cantPaginas.
-^ l 
+|nuevo|
+nuevo := self new.
+nuevo setIsbn: unIsbn setTitulo: unTitulo setAutores: unAutor setEditorial: unaEditorial setAnio: unAnio setPaginas: cantPaginas.
+^ nuevo. 
+]
+
+{ #category : 'as yet unclassified' }
+Libro >> codigo [ ^isbn.
+]
+
+{ #category : 'accessing' }
+Libro >> isbn [
+
+	^ isbn
+]
+
+{ #category : 'accessing' }
+Libro >> isbn: unIsbn [
+
+	isbn := unIsbn.
 ]
 
 { #category : 'accessing' }
 Libro >> plazoEnDias [
-^ 15 asInteger 
+^ 15 asInteger.
 ]
 
 { #category : 'initialization' }
 Libro >> setIsbn: unIsbn setTitulo: unTitulo setAutores: unAutor setEditorial: unaEditorial setAnio: unAnio setPaginas: cantPaginas [
 isbn := unIsbn .
 titulo := unTitulo .
-autor := unAutor .
+autores := unAutor .
 editorial := unaEditorial .
 anioDeEdicion := unAnio .
 paginas := cantPaginas .
+
+]
+
+{ #category : 'as yet unclassified' }
+Libro >> tipo [ 
+^ 'libro'.
+]
+
+{ #category : 'as yet unclassified' }
+Libro >> tipoDeIdentificador [ 
+^'ISBN'.
 
 ]

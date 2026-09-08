@@ -1,3 +1,6 @@
+"
+clase que modela los tiempos
+"
 Class {
 	#name : 'DatePort',
 	#superclass : 'Object',

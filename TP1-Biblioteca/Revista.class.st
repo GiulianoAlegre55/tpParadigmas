@@ -1,3 +1,6 @@
+"
+clase que modela el comportamiento de las revistas
+"
 Class {
 	#name : 'Revista',
 	#superclass : 'MaterialCatalogado',
@@ -18,7 +21,7 @@ nuevo issn: unIssn titulo: unTitulo autores: unosAutores editorial: unaEditorial
 ^nuevo.
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'accessing' }
 Revista >> codigo [ 
 ^issn, '-',numero asString.
 
@@ -36,7 +39,7 @@ Revista >> issn: unIssn [
 	issn := unIssn
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'initialization' }
 Revista >> issn: unIssn titulo: unTitulo autores: unosAutores editorial: unaEditorial anio: unAnio paginas: numPags numero: num mes: unMes [
 issn:= unIssn.
 titulo:= unTitulo.
@@ -78,10 +81,10 @@ Revista >> plazoEnDias [
 
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'accessing' }
 Revista >> tipo [ ^'revista'
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'accessing' }
 Revista >> tipoDeIdentificador [ ^'ISSN'.
 ]

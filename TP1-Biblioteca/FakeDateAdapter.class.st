@@ -1,3 +1,6 @@
+"
+no se que poner
+"
 Class {
 	#name : 'FakeDateAdapter',
 	#superclass : 'DatePort',
@@ -19,27 +22,27 @@ FakeDateAdapter class >> enDia: unDia mes:unMes anio:unAnio [
 ^self new forzarDia: unDia mes:unMes anio:unAnio
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'controlling' }
 FakeDateAdapter >> avanzarDias: unaCantidad [
     instante:=instante+ unaCantidad days.
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'controlling' }
 FakeDateAdapter >> avanzarHoras: unaCantidadHoras [
     instante:=instante + unaCantidadHoras hours
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'controlling' }
 FakeDateAdapter >> forzarDia: unDia mes:unMes anio:unAnio [
 instante:= DateAndTime year: unAnio month: unMes day:unDia hour:0 minute:0 second:0
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'controlling' }
 FakeDateAdapter >> forzarDia: unDia mes: unMes anio: unAnio hora: unaHora minuto: unMin [
     instante:=DateAndTime year: unAnio month: unMes day: unDia hour: unaHora minute: unMin second: 0
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'controlling' }
 FakeDateAdapter >> forzarFecha: unDateTime [
 instante:= unDateTime 
 

@@ -27,7 +27,7 @@ prestamo setMaterial: m setLector: l setInstante: i.
 
 { #category : 'accessing' }
 Prestamo >> description [ 
-^ ('El prestamo fue sacado a nombre de: ', self lector nombreCompleto , ' el dia: ', self inicio asDate, ' sobre el material: ')
+^ ('El prestamo fue sacado a nombre de: ', self lector nombreCompleto , ' el dia: ', self inicio asDate asString , ' sobre el material: ', material titulo )
 ]
 
 { #category : 'accessing' }

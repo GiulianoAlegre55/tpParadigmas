@@ -47,10 +47,10 @@ préstamos.
 
 ### `Biblioteca`
 
-- [ ] Clase creada en el paquete `TP1-Biblioteca`
+- ✅ Clase creada en el paquete `TP1-Biblioteca`
 
 **Creación**
-- [ ] `nombre: unString datePort: unDatePort` (método de clase)
+- ✅ `nombre: unString datePort: unDatePort` (método de clase)
 
 **Padrón de lectores**
 - [ ] `agregarLector: unLector`
@@ -94,125 +94,125 @@ préstamos.
 
 ### `MaterialCatalogado` (abstracta)
 
-- [ ] Clase creada
+- ✅ Clase creada
 
 **Datos bibliográficos**
-- [ ] `titulo`
-- [ ] `autores`
-- [ ] `autorPrincipal`
-- [ ] `esDeAutor: unNombre`
-- [ ] `editorial`
-- [ ] `anioDeEdicion`
-- [ ] `paginas`
-- [ ] `descripcion`
+- ✅ `titulo`
+- ✅ `autores`
+- ✅ `autorPrincipal`
+- ✅ `esDeAutor: unNombre`
+- ✅ `editorial`
+- ✅ `anioDeEdicion`
+- ✅ `paginas`
+- ✅ `descripcion`
 
 **Abstractos (subclassResponsibility)**
-- [ ] `codigo`
-- [ ] `plazoEnDias`
-- [ ] `tipo`
-- [ ] `tipoDeIdentificador`
+- ✅ `codigo`
+- ✅ `plazoEnDias`
+- ✅ `tipo`
+- ✅ `tipoDeIdentificador`
 
 ---
 
 ### `Libro`
 
-- [ ] Clase creada, hereda de `MaterialCatalogado`
-- [ ] `isbn: unIsbn titulo: unTitulo autores: unaColeccionDeAutores editorial: unaEditorial anio: unAnio paginas: numPaginas` (método de clase)
-- [ ] `isbn`
-- [ ] `codigo` (redefinido)
-- [ ] `plazoEnDias` (redefinido → 15)
-- [ ] `tipo` (redefinido → `'libro'`)
-- [ ] `tipoDeIdentificador` (redefinido → `'ISBN'`)
+- ✅ Clase creada, hereda de `MaterialCatalogado`
+- ✅ `isbn: unIsbn titulo: unTitulo autores: unaColeccionDeAutores editorial: unaEditorial anio: unAnio paginas: numPaginas` (método de clase)
+- ✅ `isbn`
+- ✅ `codigo` (redefinido)
+- ✅ `plazoEnDias` (redefinido → 15)
+- ✅ `tipo` (redefinido → `'libro'`)
+- ✅ `tipoDeIdentificador` (redefinido → `'ISBN'`)
 
 ---
 
 ### `Revista`
 
-- [ ] Clase creada, hereda de `MaterialCatalogado`
-- [ ] `issn: unIssn titulo: unTitulo autores: unaColeccionDeAutores editorial: unaEditorial anio: unAnio paginas: numPaginas numero: unNumero mes: unMes` (método de clase)
-- [ ] `issn`
-- [ ] `numero`
-- [ ] `mesDeEdicion`
-- [ ] `codigo` (redefinido)
-- [ ] `plazoEnDias` (redefinido → 7)
-- [ ] `tipo` (redefinido → `'revista'`)
-- [ ] `tipoDeIdentificador` (redefinido → `'ISSN'`)
+- ✅ Clase creada, hereda de `MaterialCatalogado`
+- ✅ `issn: unIssn titulo: unTitulo autores: unaColeccionDeAutores editorial: unaEditorial anio: unAnio paginas: numPags numero: unNumero mes: unMes` (método de clase)
+- ✅ `issn`
+- ✅ `numero`
+- ✅ `mesDeEdicion`
+- ✅ `codigo` (redefinido)
+- ✅ `plazoEnDias` (redefinido → 7)
+- ✅ `tipo` (redefinido → `'revista'`)
+- ✅ `tipoDeIdentificador` (redefinido → `'ISSN'`)
 
 ---
 
 ### `Persona` (abstracta)
 
-- [ ] Clase creada
-- [ ] `nombre`
-- [ ] `apellido`
-- [ ] `cuit`
+- ✅ Clase creada
+- ✅ `nombre`
+- ✅ `apellido`
+- ✅ `cuit`
 
 ---
 
 ### `Lector`
 
-- [ ] Clase creada, hereda de `Persona`
-- [ ] `numero: unNumero cuit: unCuit nombre: unNombre apellido: unApellido` (método de clase)
-- [ ] `numero`
-- [ ] `cuit`
-- [ ] `nombre`
-- [ ] `apellido`
-- [ ] `nombreCompleto`
-- [ ] `apellidoContiene: unTexto`
-- [ ] `esMoroso`
-- [ ] `puedeLlevar`
-- [ ] `motivoDeRechazo`
-- [ ] `marcarMoroso`
-- [ ] `rehabilitar`
+- ✅ Clase creada, hereda de `Persona`
+- ✅ `numero: unNumero cuit: unCuit nombre: unNombre apellido: unApellido` (método de clase)
+- ✅ `numero`
+- ✅ `cuit`
+- ✅ `nombre`
+- ✅ `apellido`
+- ✅ `nombreCompleto`
+- ✅ `apellidoContiene: unTexto`
+- ✅ `esMoroso`
+- ✅ `puedeLlevar`
+- ✅ `motivoDeRechazo`
+- ✅ `marcarMoroso`
+- ✅ `rehabilitar`
 
 ---
 
 ### `Prestamo`
 
-- [ ] Clase creada
-- [ ] `material: unMaterial lector: unLector instante: unInstante` (método de clase)
-- [ ] `material`
-- [ ] `lector`
-- [ ] `inicio`
-- [ ] `vencimiento`
-- [ ] `devolucion`
-- [ ] `plazoEnDias`
-- [ ] `registrarDevolucion: unInstante`
-- [ ] `estaVigente`
-- [ ] `estaCerrado`
-- [ ] `dias`
-- [ ] `diasTranscurridosHasta: unInstante`
-- [ ] `estaVencidoA: unInstante`
-- [ ] `excedioPlazo`
-- [ ] `descripcion`
+- ✅ Clase creada
+- ✅ `material: unMaterial lector: unLector instante: unInstante` (método de clase)
+- ✅ `material`
+- ✅ `lector`
+- ✅ `inicio`
+- ✅ `vencimiento`
+- ✅ `devolucion`
+- ✅ `plazoEnDias`
+- ✅ `registrarDevolucion: unInstante`
+- ✅ `estaVigente`
+- ✅ `estaCerrado`
+- ✅ `dias`
+- ✅ `diasTranscurridosHasta: unInstante`
+- ✅ `estaVencidoA: unInstante`
+- ✅ `excedioPlazo`
+- ✅ `descripcion`
 
 ---
 
 ### `DatePort` (abstracta)
 
-- [ ] Clase creada
-- [ ] `now` (abstracto)
+- ✅ Clase creada
+- ✅ `now` (abstracto)
 
 ---
 
 ### `SystemDateAdapter`
 
-- [ ] Clase creada, hereda de `DatePort`
-- [ ] `now`
+- ✅ Clase creada, hereda de `DatePort`
+- ✅ `now`
 
 ---
 
 ### `FakeDateAdapter`
 
-- [ ] Clase creada, hereda de `DatePort`
-- [ ] `en: unDateAndTime` (método de clase)
-- [ ] `enDia: unDia mes: unMes anio: unAnio` (método de clase)
-- [ ] `now`
-- [ ] `forzarFecha: unDateAndTime`
-- [ ] `forzarDia: unDia mes: unMes anio: unAnio`
-- [ ] `forzarDia: unDia mes: unMes anio: unAnio hora: unaHora minuto: unMin`
-- [ ] `avanzarDias: unaCantidad`
-- [ ] `avanzarHoras: unaCantidadHoras`
+- ✅ Clase creada, hereda de `DatePort`
+- ✅ `en: unDateAndTime` (método de clase)
+- ✅ `enDia: unDia mes: unMes anio: unAnio` (método de clase)
+- ✅ `now`
+- ✅ `forzarFecha: unDateAndTime`
+- ✅ `forzarDia: unDia mes: unMes anio: unAnio`
+- ✅ `forzarDia: unDia mes: unMes anio: unAnio hora: unaHora minuto: unMin`
+- ✅ `avanzarDias: unaCantidad`
+- ✅ `avanzarHoras: unaCantidadHoras`
 
 ---
 

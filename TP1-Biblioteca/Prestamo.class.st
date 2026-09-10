@@ -63,7 +63,7 @@ ifTrue: [
 { #category : 'comparing' }
 Prestamo >> estaVigente [
 
-	devolucion ifNil: [ ^ false ] ifNotNil: [ ^ true ].
+^	self devolucion isNil.
 ]
 
 { #category : 'testing' }
@@ -95,6 +95,7 @@ Prestamo >> plazoEnDias [
 { #category : 'controlling' }
 Prestamo >> registrarDevolucion: unInstante [
 devolucion:= unInstante.
+(self excedioPlazo) ifTrue: [ lector marcarMoroso ].
 ^ self
 
 ]

@@ -24,8 +24,13 @@ f setLector: unLector setPrestamosVigentes: prestamos.
 ^ f.
 ]
 
+{ #category : 'testing' }
+FichaDeLector >> cantidadEnPoder [
+^ codigos size.
+]
+
 { #category : 'accessing' }
-FichaDeLector >> codigos [
+FichaDeLector >> codigoEnPoder [
 ^codigos
 ]
 
@@ -45,16 +50,6 @@ super initialize.
 codigos := OrderedCollection new.
 ]
 
-{ #category : 'initialization' }
-FichaDeLector >> lector: unLector prestamosVigentes: prestamos [
-numero := unLector numero .
-cuit:= unLector cuit.
-nombreCompleto := unLector nombreCompleto.
-esMoroso := unLector esMoroso.
-motivoDeRechazo := unLector motivoDeRechazo .
-prestamos do:[:cadaElemento|  codigos add: (cadaElemento material) codigo ]
-]
-
 { #category : 'accessing' }
 FichaDeLector >> motivoDeRechazo [
 ^motivoDeRechazo
@@ -68,6 +63,11 @@ FichaDeLector >> nombreCompleto [
 { #category : 'accessing' }
 FichaDeLector >> numero [
 ^ numero 
+]
+
+{ #category : 'accessing' }
+FichaDeLector >> puedeLlevar [ 
+^ motivoDeRechazo isNil 
 ]
 
 { #category : 'initialization' }

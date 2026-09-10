@@ -24,6 +24,20 @@ unaBiblioteca setNombre: unString setDatePort: unDatePort.
 ^ unaBiblioteca 
 ]
 
+{ #category : 'operations' }
+Biblioteca >> agregarLector: l [ 
+"verificamos primero numero de lector y cuit"
+|existe| 
+existe := lectores anySatisfy: [ :cadaElemento | ((cadaElemento numero) = l numero) | (cadaElemento cuit = l cuit)].
+(existe) 
+ifFalse: [
+	 lectores add: l.
+	 ^ lectores ] 
+ifTrue: [ ^ nil ].
+
+
+]
+
 { #category : 'initialization' }
 Biblioteca >> initialize [ 
 super initialize.

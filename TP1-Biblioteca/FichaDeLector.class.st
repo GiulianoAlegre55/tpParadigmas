@@ -67,7 +67,7 @@ FichaDeLector >> numero [
 
 { #category : 'accessing' }
 FichaDeLector >> puedeLlevar [ 
-^ motivoDeRechazo isNil 
+^ motivoDeRechazo isNil
 ]
 
 { #category : 'initialization' }

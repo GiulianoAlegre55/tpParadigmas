@@ -53,42 +53,42 @@ préstamos.
 - ✅ `nombre: unString datePort: unDatePort` (método de clase)
 
 **Padrón de lectores**
-- [ ] `agregarLector: unLector`
-- [ ] `lectorNumero: unNumero`
-- [ ] `lectores`
+- ✅ `agregarLector: unLector`
+- ✅ `lectorNumero: unNumero`
+- ✅ `lectores`
 
 **Catálogo**
-- [ ] `catalogar: unMaterial`
-- [ ] `materialCodigo: unCodigo`
-- [ ] `catalogo`
-- [ ] `materialesDe: unAutor`
+- ✅ `catalogar: unMaterial`
+- ✅ `materialCodigo: unCodigo`
+- ✅ `catalogo`
+- ✅ `materialesDe: unAutor`
 
 **Préstamo y devolución**
-- [ ] `prestar: unCodigo a: unNumero`
-- [ ] `devolver: unCodigo`
+- ✅ `prestar: unCodigo a: unNumero`
+- ✅ `devolver: unCodigo`
 
 **Disponibilidad**
-- [ ] `estaPrestado: unCodigo`
+- ✅ `estaPrestado: unCodigo`
 
 **Registro de préstamos**
-- [ ] `prestamoVigenteDe: unCodigo`
-- [ ] `cantidadDePrestamosDe: unNumero`
-- [ ] `prestamos`
-- [ ] `prestamosDelMaterial: unCodigo`
-- [ ] `prestamosVigentes`
-- [ ] `prestamosDe: unNumero`
-- [ ] `prestamosVigentesDe: unNumero`
-- [ ] `prestamosVencidos`
+- ✅ `prestamoVigenteDe: unCodigo`
+- ✅ `cantidadDePrestamosDe: unNumero`
+- ✅ `prestamos`
+- ✅ `prestamosDelMaterial: unCodigo`
+- ✅ `prestamosVigentes`
+- ✅ `prestamosDe: unNumero`
+- ✅ `prestamosVigentesDe: unNumero`
+- ✅ `prestamosVencidos`
 
 **Morosidad**
-- [ ] `esMoroso: unNumero`
-- [ ] `lectoresMorosos`
-- [ ] `rehabilitar: unNumero`
+- ✅ `esMoroso: unNumero`
+- ✅ `lectoresMorosos`
+- ✅ `rehabilitar: unNumero`
 
 **Mostrador**
-- [ ] `identificarSocio: unNumero`
-- [ ] `identificarCuit: unCuit`
-- [ ] `buscarLectoresPorApellido: unTexto`
+- ✅ `identificarSocio: unNumero`
+- ✅ `identificarCuit: unCuit`
+- ✅ `buscarLectoresPorApellido: unTexto`
 
 ---
 
@@ -152,7 +152,7 @@ préstamos.
 ### `Lector`
 
 - ✅ Clase creada, hereda de `Persona`
-- ✅ `numero: unNumero cuit: unCuit nombre: unNombre apellido: unApellido` (método de clase)
+- ✅ `numero: unNumero nombre: unNombre apellido: unApellido cuit: unCuit` (método de clase)
 - ✅ `numero`
 - ✅ `cuit`
 - ✅ `nombre`
@@ -218,16 +218,16 @@ préstamos.
 
 ### `FichaDeLector` (DTO)
 
-- [ ] Clase creada
-- [ ] `deLector: unLector conPrestamosVigentes: unaColeccionDePrestamos` (método de clase)
-- [ ] `numero`
-- [ ] `cuit`
-- [ ] `nombreCompleto`
-- [ ] `esMoroso`
-- [ ] `puedeLlevar`
-- [ ] `motivoDeRechazo`
-- [ ] `codigosEnPoder`
-- [ ] `cantidadEnPoder`
+- ✅ Clase creada
+- ✅ `lector: unLector prestamosVigentes: unaColeccionDePrestamos` (método de clase)
+- ✅ `numero`
+- ✅ `cuit`
+- ✅ `nombreCompleto`
+- ✅ `esMoroso`
+- ✅ `puedeLlevar`
+- ✅ `motivoDeRechazo`
+- ✅ `codigoEnPoder`
+- ✅ `cantidadEnPoder`
 
 ---
 

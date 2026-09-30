@@ -228,7 +228,7 @@ l:=self lectorNumero: unNumero.
 	 ].
 (l esMoroso) ifTrue: [ 
 	Transcript 
-	show: ('El lector numero: ', l numero , ' es MOROSO.').
+	show: ('El lector numero: ', l numero asString, ' es MOROSO.').
 	^nil.
 	 ].
 (self estaPrestado: unCodigo) ifTrue: [ 

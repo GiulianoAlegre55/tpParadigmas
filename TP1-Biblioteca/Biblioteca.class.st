@@ -236,7 +236,7 @@ l:=self lectorNumero: unNumero.
 	show: 'El material se encuentra prestado actualmente'.
 	^nil.
 	 ].
-p := Prestamo material: m  lector: l  instante: datePort . 
+p := Prestamo material: m  lector: l  instante: (datePort now) . 
 prestamos add: p.
 ^p.
 

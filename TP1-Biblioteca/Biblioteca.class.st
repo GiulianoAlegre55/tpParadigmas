@@ -84,7 +84,8 @@ m := p detect: [ :cadaPrestamoVigente| cadaPrestamoVigente material codigo = unC
 	^nil.
 	].
 
-m registrarDevolucion: datePort.
+m registrarDevolucion: (datePort now).
+^m.
 
 
 ]
@@ -106,8 +107,8 @@ m ifNil: [^false] ifNotNil:[^true].
 { #category : 'printing' }
 Biblioteca >> identificarCuit: unCuit [ 
 |l p f|
-l:= lectores select:[:cada|cada cuit = unCuit ].
-(l)ifNil: [ ^nil ].
+l:= lectores detect:[:cada|cada cuit = unCuit ]ifNone:[^nil].
+
 
 p:= self prestamosVigentesDe: l numero .
 f:= FichaDeLector lector: l prestamosVigentes: p.
@@ -193,7 +194,7 @@ l := prestamos select:[:cada| cada material codigo  = unCodigo ].
 Biblioteca >> prestamosVencidos [ 
 |r s|
 r:= self prestamosVigentes.
-s:= r select: [ :cada| cada vencimiento < datePort ].
+s:= r select: [ :cada| cada vencimiento < (datePort now)].
 ^s.
 ]
 

@@ -166,7 +166,7 @@ Biblioteca >> materialesDe: nom [
 Biblioteca >> prestamoVigenteDe: unNumero [
 |m p|
 p := prestamos select:[:cada| cada estaVigente].
-m := p detect: [ :cadaPrestamoVigente| cadaPrestamoVigente lector numero = unNumero ] ifNone: [ m:=nil].
+m := p detect: [ :cadaPrestamoVigente| cadaPrestamoVigente material codigo = unNumero ] ifNone: [ m:=nil].
 
 ^m.
 ]

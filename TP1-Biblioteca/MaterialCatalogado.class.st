@@ -36,7 +36,7 @@ autores isEmpty ifTrue:[^nil].
 { #category : 'accessing' }
 MaterialCatalogado >> autores [
 
-	^ autores
+	^ (autores asOrderedCollection copy)
 ]
 
 { #category : 'accessing' }

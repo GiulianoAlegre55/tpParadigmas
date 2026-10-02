@@ -28,6 +28,8 @@ unaBiblioteca setNombre: unString setDatePort: unDatePort.
 Biblioteca >> agregarLector: l [ 
 "verificamos primero numero de lector y cuit"
 |existe| 
+(l isKindOf:Lector )ifFalse:[Transcript show:'El objeto a agregar no es un Lector Valido';cr.
+	^nil].
 existe := lectores anySatisfy: [ :cadaElemento | ((cadaElemento numero) = l numero) | (cadaElemento cuit = l cuit)].
 (existe) 
 ifFalse: [
@@ -58,6 +60,8 @@ p := self prestamosDe: unNumero.
 { #category : 'operations' }
 Biblioteca >> catalogar: m [
 |existe| 
+(m isKindOf:MaterialCatalogado )ifFalse:[Transcript show:'El objeto a catalogar no es Material Valido';cr.
+	^nil].
 existe := catalogo anySatisfy: [ :cadaElemento | ((cadaElemento codigo ) = m codigo)].
 (existe) 
 ifFalse: [
@@ -76,6 +80,8 @@ Biblioteca >> catalogo [
 { #category : 'operations' }
 Biblioteca >> devolver: unCodigo [
 |p m|
+(unCodigo isString) ifFalse:[Transcript show: 'Error: El código para devolver debe ser un texto.'; cr. 
+       ^nil].
 p := prestamos select:[:cada| cada estaVigente].
 m := p detect: [ :cadaPrestamoVigente| cadaPrestamoVigente material codigo = unCodigo ] ifNone: [ m:=nil].
 
@@ -216,6 +222,11 @@ r:= (self prestamosDe: unNumero) select:[:cada | cada estaVigente ] .
 { #category : 'operations' }
 Biblioteca >> prestar: unCodigo a: unNumero [
 |l m p|
+(unCodigo isString) ifFalse:[Transcript show: 'El codigo del material debe ser un texto.'; cr. 
+        ^ nil].
+    (unNumero isInteger) ifFalse:[ 
+        Transcript show: 'El numero de socio debe ser un entero.'; cr. 
+^ nil ].
 m :=self materialCodigo: unCodigo.
 (m) ifNil:[ 
 	Transcript 

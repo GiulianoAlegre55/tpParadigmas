@@ -225,6 +225,7 @@ l:=self lectorNumero: unNumero.
 (l) ifNil: [ 
 	Transcript 
 	show: 'El numero de usuario buscado no se encuentra en los registros';cr.
+	^nil.
 	 ].
 (l esMoroso) ifTrue: [ 
 	Transcript 

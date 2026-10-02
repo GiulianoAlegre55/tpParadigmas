@@ -30,7 +30,7 @@ FichaDeLector >> cantidadEnPoder [
 ]
 
 { #category : 'accessing' }
-FichaDeLector >> codigoEnPoder [
+FichaDeLector >> codigosEnPoder [
 ^codigos
 ]
 

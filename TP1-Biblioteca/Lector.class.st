@@ -14,7 +14,7 @@ Class {
 }
 
 { #category : 'initialization' }
-Lector class >> numero: unNumero nombre: unNombre apellido: unApellido cuit: unCuit [ 
+Lector class >> numero: unNumero cuit: unCuit nombre: unNombre apellido: unApellido [ 
 |lector|
 lector := self new.
 lector setNumero: unNumero setNombre: unNombre setApellido: unApellido setCuit: unCuit. 

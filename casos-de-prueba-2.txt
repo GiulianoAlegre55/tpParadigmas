@@ -1,0 +1,143 @@
+|biblio reloj lector1 lector2 lector3 lector4 lector5 lector6 lector7 lector8 lector9 libro1 libro2 
+revista1 revista2 libro3 libro4 libro5 libro6 revista3 revista4 revista5|  
+"forzarDia: unDia mes: unMes anio: unAnio hora: unaHora minuto: unMin" 
+reloj := FakeDateAdapter enDia: 1 mes: 10 anio: 2026. 
+reloj avanzarHoras: 9. 
+biblio := Biblioteca nombre: 'Puto el que lee' datePort: reloj. 
+ 
+lector1 := Lector numero: 1 cuit: '1111111' nombre: 'Giuliano' apellido: 'Alegre' . 
+lector2 := Lector numero: 2 cuit: '2222222' nombre: 'Lisandro' apellido: 'Buttera'. 
+lector3 := Lector numero: 3 cuit: '3333333' nombre: 'Tomas' apellido: 'Mazzoni'. 
+lector4 := Lector numero: 4 cuit: '4444444' nombre: 'Blas' apellido: 'Revello'. 
+lector5 := Lector numero: 1 cuit: '5555555' nombre: 'Fernando' apellido: 'Martinez'. 
+lector6 := Lector numero: 5 cuit: '1111111' nombre: 'Martin' apellido: 'Fernandez' . 
+lector7 := Lector numero: 7 cuit: '7777777' nombre: 'Lucia' apellido: 'Gomez'. 
+lector8 := Lector numero: 8 cuit: '8888888' nombre: 'Mateo' apellido: 'Romero'. 
+lector9 := Lector numero: 9 cuit: '9999999' nombre: 'Camila' apellido: 'Benitez'. 
+ 
+libro1:= Libro isbn: '111-1-111-11111-1' titulo: 'El Principito' autores: #() editorial: 'Eureka' anio: 
+1943  paginas: 316. 
+libro2:= Libro isbn: '222-2-222-22222-2' titulo: 'Caperucita Roja' autores: #('Antonio' 'Pablo') 
+editorial: 'Eureka' anio: 2007 paginas: 54. 
+revista1 := Revista issn: '1111-1111' titulo: 'MesarioAgosto' autores: #('CEUT') editorial: 'UTN'  
+anio: 2026 paginas: 16 numero: 8 mes: 9. 
+revista2 := Revista issn: '2222-2222' titulo: 'MesarioJulio' autores: #('CEUT') editorial: 'UTN'  anio: 
+2026 paginas: 17 numero: 7 mes: 8. 
+libro3 := Libro isbn: '111-1-111-11111-1' titulo: 'Los 4 Chanchitos' autores: #('Armando' 'Esteban') 
+editorial: 'Quito' anio: 2005 paginas: 32. 
+libro4 := Libro isbn: '978-9-505-15629-0' titulo: 'Cien años de soledad' autores: #('Gabriel Garcia 
+Marquez') editorial: 'Sudamericana' anio: 1967 paginas: 471. 
+libro5 := Libro isbn: '978-8-420-66779-9' titulo: 'Ficciones' autores: #('Jorge Luis Borges') editorial: 
+'Sur' anio: 1944 paginas: 174. 
+libro6 := Libro isbn: '978-0-141-03614-4' titulo: '1984' autores: #('George Orwell') editorial: 'Secker 
+& Warburg' anio: 1949 paginas: 328. 
+revista3 := Revista issn: '0028-0836' titulo: 'Nature' autores: #('Nature Publishing Group') editorial: 
+'Springer Nature' anio: 2026 paginas: 120 numero: 8012 mes: 3. 
+revista4 := Revista issn: '0036-8075' titulo: 'Science' autores: #('AAAS') editorial: 'American 
+Association for the Advancement of Science' anio: 2025 paginas: 98 numero: 6710 mes: 11. 
+revista5 := Revista issn: '0028-4793' titulo: 'National Geographic' autores: #('National Geographic 
+Society') editorial: 'Disney Publishing' anio: 2026 paginas: 84 numero: 4 mes: 4. 
+ 
+biblio agregarLector: lector1 ; agregarLector: lector2 ; agregarLector: lector3 ; agregarLector: 
+lector4 ; agregarLector: lector7 ; agregarLector: lector8 ; agregarLector: lector9. 
+biblio agregarLector: lector1. "<- Mensaje: El lector ya se encontraba en el sistema." 
+biblio agregarLector: lector5. "<- Mensaje: El lector ya se encontraba en el sistema." 
+biblio agregarLector: lector6. "<- Mensaje: El lector ya se encontraba en el sistema." 
+biblio lectorNumero: 1.  
+biblio lectorNumero: 6. "<- Deberiamos agregar mensaje de error" 
+ 
+biblio catalogar: libro1 ; catalogar: revista1 ; catalogar: revista2 ; catalogar: libro4 ; catalogar: 
+libro5 ; catalogar: libro6 ; catalogar: revista3 ; catalogar: revista4 ; catalogar: revista5. 
+biblio catalogar: libro1. "<- Mensaje: Ya existe un material con ese código" 
+biblio catalogar: libro3. "<- Mensaje: Ya existe un material con ese código" 
+biblio materialCodigo: '111-1-111-11111-1'. 
+biblio materialCodigo: '222-2-222-22222-2'. "<- Deberiamos agregar mensaje de error" 
+biblio materialCodigo: '2222-2222'. "<- Deberiamos agregar mensaje de error" 
+biblio materialCodigo: '2222-2222-7'. 
+biblio materialCodigo: '3333-3-333-33333-3'. "<- Deberiamos agregar mensaje de error" 
+biblio materialCodigo: '3333-3333-7'. "<- Deberiamos agregar mensaje de error" 
+biblio materialesDe: 'CEUT'. 
+biblio materialesDe: 'Pablo'. 
+biblio materialesDe: 'UTN'. "<- Deberiamos agregar mensaje de error" 
+biblio materialesDe: 'Eureka'. "<- Deberiamos agregar mensaje de error" 
+biblio materialesDe: 'Matias'. "<- Deberiamos agregar mensaje de error" 
+ 
+biblio prestar: libro1 codigo a: 1. 
+biblio prestar: libro2 codigo a: 3. "<- Mensaje: El codigo buscado no se encuentra en el catalogo" 
+biblio prestar: libro3 codigo a: 1. "<- Mensaje: El material se encuentra prestado actualmente" 
+biblio prestar: libro1 codigo a: 2. "<- Mensaje: El material se encuentra prestado actualmente" 
+biblio prestar: revista1 codigo a: 4. 
+biblio prestar: libro4 codigo a: 2. 
+biblio prestar: libro5 codigo a: 3. 
+biblio prestar: libro6 codigo a: 4. 
+biblio prestar: revista3 codigo a: 7. 
+biblio prestar: revista4 codigo a: 8. 
+biblio prestar: revista5 codigo a: 9. 
+ 
+biblio devolver: libro2 codigo. "<- Mensaje: El material no se encuentra en la lista de prestamos 
+vigentes" 
+biblio devolver: revista2 codigo. "<- Mensaje: El material no se encuentra en la lista de prestamos 
+vigentes" 
+biblio devolver: libro1 codigo. 
+biblio prestar: libro1 codigo a: 2. 
+ 
+biblio rehabilitar: 1. "Deberiamos mostrar un mensaje no es moroso" 
+biblio rehabilitar: 7. "Deberiamos mostrar un mensaje no existe" 
+ 
+biblio identificarSocio: 1. 
+biblio identificarSocio: 4. 
+biblio identificarSocio: 5. "Deberiamos mostrar un mensaje no existe" 
+biblio identificarCuit: '2222222'. 
+biblio identificarCuit: '1111111'. 
+biblio identificarCuit: '5555555'. "Deberiamos mostrar un mensaje no existe" 
+biblio buscarLectoresPorApellido: 'Buttera'. 
+biblio buscarLectoresPorApellido: 'Fernandez'. "Deberiamos mostrar un mensaje lista vacia" 
+ 
+reloj avanzarDias: 6. 
+biblio prestamosVigentes. 
+ 
+biblio devolver: libro1 codigo. 
+biblio devolver: revista1 codigo. 
+biblio esMoroso: 2. 
+biblio esMoroso: 7. "false" 
+ 
+reloj avanzarDias: 2. 
+biblio catalogar: libro2 . 
+biblio prestar: revista3 codigo a: 8.  
+biblio esMoroso: 7. "false" 
+biblio devolver: revista3 codigo. 
+biblio devolver: libro5 codigo. 
+biblio esMoroso: 7. "true" 
+biblio esMoroso: 3. "false" 
+biblio prestar: revista3 codigo a: 8. 
+biblio prestar: libro2 codigo a: 7. "<-Mensaje: El lector numero:7 es MOROSO" 
+ 
+reloj avanzarDias: 5. 
+biblio esMoroso: 7. "true" 
+biblio prestamosVigentes. 
+biblio prestar: revista1 codigo a: 7. 
+biblio rehabilitar: 7. 
+biblio esMoroso: 7. "false" 
+biblio prestar: revista1 codigo a: 7. 
+biblio esMoroso: 2. "false" 
+biblio devolver: libro4 codigo. 
+biblio esMoroso: 2. "false" 
+biblio devolver: revista3 codigo. 
+biblio esMoroso: 8. "false" 
+biblio prestar: libro1 codigo a: 8. "se presta, todavia no es moroso" 
+biblio devolver: revista4 codigo. "8 devuelve la revista fuera de tiempo" 
+biblio esMoroso: 8. "true" 
+biblio prestar: libro2 codigo a: 8. "No se presta, es moroso" 
+ 
+reloj avanzarDias: 5. 
+biblio esMoroso: 4. "false" 
+biblio devolver: libro6 codigo. 
+biblio esMoroso: 4. "true" 
+biblio devolver: revista5 codigo. 
+biblio devolver: revista1 codigo. 
+ 
+reloj avanzarDias: 5. 
+biblio esMoroso: 8. "true" 
+biblio devolver: libro1 codigo. 
+biblio esMoroso: 8. "true, no se modifica" 
+biblio prestamosVigentes.

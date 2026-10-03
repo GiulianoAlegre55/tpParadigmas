@@ -1,0 +1,160 @@
+|biblio reloj nombresLectores apellidosLectores cuitLectores codigoLibros revista1 revista2  titulosLibros autoresLibros editorialesLibros cantPaginasLibro codigoRevistas tituloRevistas autoresRevista editorialRevista anioRevista paginasRevista numeroRevista mesRevista Biblio libro lector aux|
+reloj := FakeDateAdapter enDia: 1 mes: 1 anio: 2026.
+biblio := Biblioteca nombre: 'Tralelero y los tralaleritos' datePort: reloj.
+
+nombresLectores := #('Lucas' 'Sofía' 'Mateo' 'Valentina' 'Santiago' 'Camila' 'Martín' 'Isabella' 'Nicolás' 'Mariana' 'Joaquín' 'Lucía' 'Tomás' 'Elena' 'Benjamín' 'Victoria' 'Sebastián' 'Daniela' 'Diego' 'Gabriela' 'Julián' 'Paula' 'Felipe' 'Martina' 'Agustín' 'Catalina' 'Emiliano' 'Renata' 'Samuel' 'Antonella' 'Maximiliano' 'Abril' 'Facundo' 'Zoe' 'Gonzalo' 'Valeria' 'Ignacio' 'Julieta' 'Andrés' 'Mía' 'Fernando' 'Paulina' 'Matías' 'Alma' 'Manuel' 'Emilia' 'Rodrigo' 'Clara' 'Álvaro' 'Florencia').
+
+apellidosLectores := #('González' 'Rodríguez' 'Gómez' 'Fernández' 'López' 'Díaz' 'Martínez' 'Pérez' 'García' 'Sánchez' 'Romero' 'Sosa' 'Álvarez' 'Torres' 'Ruiz' 'Ramírez' 'Álvarez' 'Benítez' 'Acosta' 'Medina' 'Herrera' 'Suárez' 'Aguirre' 'Giménez' 'Gutiérrez' 'Díaz' 'Rojas' 'Molina' 'Castro' 'Ortiz' 'Silva' 'Núñez' 'Díaz' 'Juárez' 'Cabrera' 'Díaz' 'Morales' 'García' 'Moreno' 'Martínez' 'Domínguez' 'Carrizo' 'González' 'González' 'Ojeda' 'Quiroga' 'Fernández' 'Bianchi' 'Rossi' 'Ferrer').
+
+cuitLectores:=#('20-34581290-3' '27-39120485-4' '20-41098234-8' '27-42567109-1' '23-38912456-9' '20-30456123-5' '27-35890123-8' '24-40123890-7' '20-43567890-2' '27-38450129-6' '20-36789123-1' '27-41230984-7' '20-32987456-0' '27-44019283-5' '23-35678901-4' '20-39871234-9' '27-37129845-2' '20-42345678-6' '27-33456789-0' '20-45123890-4' '27-40982345-3' '20-31234567-7' '27-36540129-8' '23-41982345-7' '20-38456120-5' '27-43091823-9' '20-35671234-2' '27-39870123-6' '20-40198234-1' '27-42109834-5' '20-33890123-4' '27-35129845-7' '24-38901234-5' '20-44123890-0' '27-38019283-4' '20-37456120-8' '27-41890234-1' '20-32109845-6' '27-44901234-8' '23-36789012-3' '20-39450129-7' '27-37890123-0' '20-42901234-5' '27-34123890-2' '20-45890123-9' '27-40345678-4' '20-31890234-1' '27-36901234-5' '23-42109845-6' '20-38129034-8').
+
+codigoLibros := #('978-0-262-51087-5' '978-1-491-95766-0' '978-0-134-68599-1' '978-0-596-52068-7' '978-0-321-12521-7' '978-1-593-27928-8' '978-0-201-63361-0' '978-1-449-35573-9' '978-0-132-35088-4' '978-0-596-00712-6' '978-1-617-29454-9' '978-0-307-27767-1' '978-0-061-12008-4' '978-0-743-27356-5' '978-0-451-52493-5' '978-0-385-49081-8' '978-0-141-43951-8' '978-0-345-39180-3' '978-0-679-78326-8' '978-1-501-14297-0' '978-0-374-53355-7' '978-0-812-97968-8' '978-0-142-43723-0' '978-0-393-35594-9' '978-0-062-31609-7' '978-1-250-30169-6' '978-0-735-21129-2' '978-0-525-55947-4' '978-1-984-82217-8' '978-0-316-76948-0' '978-0-671-02703-2' '978-0-446-31078-9' '978-0-060-93546-7' '978-0-143-12774-1' '978-0-307-58837-1' '978-0-345-80678-9' '978-0-553-29335-7' '978-0-743-47711-6' '978-0-684-80122-3' '978-0-140-44913-6' '978-1-400-03341-6' '978-0-385-53785-8' '978-0-802-14850-5' '978-0-399-59050-4' '978-1-594-63366-0' '978-0-307-94948-6' '978-0-062-45771-4' '978-1-250-04486-0' '978-0-735-21909-0' '978-0-525-65774-3' '978-1-982-13727-4' '978-0-316-01584-4' '978-0-670-02055-3' '978-0-441-17271-9' '978-0-060-88328-7' '978-0-143-03943-3' '978-0-307-26975-1' '978-0-345-53837-6' '978-0-553-38016-3' '978-0-743-27357-2' '978-0-684-83049-0' '978-0-140-28333-4' '978-1-400-07927-8' '978-0-385-50420-1' '978-0-804-13902-1' '978-0-399-16927-4' '978-1-594-48000-3' '978-0-307-47427-8' '978-0-062-07348-8' '978-1-250-17860-1' '978-0-735-22462-9' '978-0-525-53629-1' '978-1-984-80125-8' '978-0-316-43896-4' '978-0-671-02738-4' '978-0-452-28423-4' '978-0-061-12241-5' '978-0-143-12417-7' '978-0-307-74443-2' '978-0-345-40447-3' '978-0-553-10953-5' '978-0-743-24722-1' '978-0-684-82471-0' '978-0-140-17739-8' '978-1-416-52479-3' '978-0-385-53424-6' '978-0-805-09666-8' '978-0-425-28517-6' '978-1-594-20487-6' '978-0-307-27777-0' '978-0-062-67841-6' '978-1-250-20976-3' '978-0-735-21367-8' '978-0-525-55949-8' '978-1-982-10540-2' '978-0-316-22853-3' '978-0-670-01690-7' '978-0-446-67553-6' '978-0-060-55566-5' '978-0-143-03841-2').
+
+titulosLibros := #('Cien años de soledad' 'Don Quijote de la Mancha' 'Ficciones' 'El aleph' 'Rayuela' '1984' 'Un mundo feliz' 'Fahrenheit 451' 'El túnel' 'Sobre héroes y tumbas' 'La metamorfosis' 'El proceso' 'Crimen y castigo' 'Los hermanos Karamázov' 'Guerra y paz' 'Ana Karénina' 'El principito' 'El retrato de Dorian Gray' 'Orgullo y prejuicio' 'Cumbres borrascosas' 'Jane Eyre' 'Frankenstein' 'Drácula' 'El gran Gatsby' 'Matar a un ruiseñor' 'El guardián entre el centeno' 'Las uvas de la ira' 'Al este del Edén' 'Por quién doblan las campanas' 'El viejo y el mar' 'La fiesta del chivo' 'La ciudad y los perros' 'Conversación en La Catedral' 'Pedro Páramo' 'El llano en llamas' 'La sombra del viento' 'El laberinto de los espíritus' 'Crónica de una muerte anunciada' 'El amor en los tiempos del cólera' 'Los pasos perdidos' 'El reino de este mundo' 'La invención de Morel' 'El informe de Brodie' 'Boquitas pintadas' 'El beso de la mujer araña' 'Santa Evita' 'La novela de Perón' 'El extranjero' 'La peste' 'La náusea' 'El muro' 'Esperando a Godot' 'Madame Bovary' 'La educación sentimental' 'En busca del tiempo perdido' 'Los miserables' 'Nuestra Señora de París' 'El conde de Montecristo' 'Los tres mosqueteros' 'Rojo y negro' 'La cartuja de Parma' 'El maestro y Margarita' 'Lolita' 'Pálido fuego' 'El perfume' 'Siddhartha' 'El lobo estepario' 'Demian' 'La montaña mágica' 'Moby Dick' 'Bartleby el escribiente' 'Hojas de hierba' 'Las flores del mal' 'La divina comedia' 'La Odisea' 'La Ilíada' 'Edipo rey' 'Antígona' 'Medea' 'Hamlet' 'Macbeth' 'Otelo' 'El rey Lear' 'Romeo y Julieta' 'La tempestad' 'El señor de los anillos' 'El hobbit' 'El silmarillion' 'Dune' 'Fundación' 'Yo robot' 'Neuromante' 'Snow Crash' 'La naranja mecánica' 'Ensayo sobre la ceguera' 'El evangelio según Jesucristo' 'Todos los nombres' 'La tregua' 'Gracias por el fuego' 'El pozo').
+
+autoresLibros:= #('Gabriel García Márquez' 'Miguel de Cervantes' 'Jorge Luis Borges' 'Jorge Luis Borges' 'Julio Cortázar' 'George Orwell' 'Aldous Huxley' 'Ray Bradbury' 'Ernesto Sabato' 'Ernesto Sabato' 'Franz Kafka' 'Franz Kafka' 'Fiódor Dostoyevski' 'Fiódor Dostoyevski' 'León Tolstói' 'León Tolstói' 'Antoine de Saint-Exupéry' 'Oscar Wilde' 'Jane Austen' 'Emily Brontë' 'Charlotte Brontë' 'Mary Shelley' 'Bram Stoker' 'F. Scott Fitzgerald' 'Harper Lee' 'J. D. Salinger' 'John Steinbeck' 'John Steinbeck' 'Ernest Hemingway' 'Ernest Hemingway' 'Mario Vargas Llosa' 'Mario Vargas Llosa' 'Mario Vargas Llosa' 'Juan Rulfo' 'Juan Rulfo' 'Carlos Ruiz Zafón' 'Carlos Ruiz Zafón' 'Gabriel García Márquez' 'Gabriel García Márquez' 'Alejo Carpentier' 'Alejo Carpentier' 'Adolfo Bioy Casares' 'Jorge Luis Borges' 'Manuel Puig' 'Manuel Puig' 'Tomás Eloy Martínez' 'Tomás Eloy Martínez' 'Albert Camus' 'Albert Camus' 'Jean-Paul Sartre' 'Jean-Paul Sartre' 'Samuel Beckett' 'Gustave Flaubert' 'Gustave Flaubert' 'Marcel Proust' 'Víctor Hugo' 'Víctor Hugo' 'Alexandre Dumas' 'Alexandre Dumas' 'Stendhal' 'Stendhal' 'Mijaíl Bulgákov' 'Vladimir Nabokov' 'Vladimir Nabokov' 'Patrick Süskind' 'Hermann Hesse' 'Hermann Hesse' 'Hermann Hesse' 'Thomas Mann' 'Herman Melville' 'Herman Melville' 'Walt Whitman' 'Charles Baudelaire' 'Dante Alighieri' 'Homero' 'Homero' 'Sófocles' 'Sófocles' 'Eurípides' 'William Shakespeare' 'William Shakespeare' 'William Shakespeare' 'William Shakespeare' 'William Shakespeare' 'William Shakespeare' 'J. R. R. Tolkien' 'J. R. R. Tolkien' 'J. R. R. Tolkien' 'Frank Herbert' 'Isaac Asimov' 'Isaac Asimov' 'William Gibson' 'Neal Stephenson' 'Anthony Burgess' 'José Saramago' 'José Saramago' 'José Saramago' 'Mario Benedetti' 'Mario Benedetti' 'Juan Carlos Onetti').
+
+editorialesLibros:= #('Editorial Sudamericana' 'Francisco de Robles' 'Editorial Sur' 'Editorial Losada' 'Editorial Sudamericana' 'Secker and Warburg' 'Chatto and Windus' 'Ballantine Books' 'Editorial Sur' 'Compania General Fabril Editora' 'Kurt Wolff Verlag' 'Verlag Die Schmiede' 'El mensajero ruso' 'El mensajero ruso' 'El mensajero ruso' 'El mensajero ruso' 'Reynal and Hitchcock' 'Lippincotts Monthly Magazine' 'T Egerton' 'Thomas Cautley Newby' 'Smith Elder and Co' 'Lackington Hughes Harding Mavor and Jones' 'Archibald Constable and Company' 'Charles Scribners Sons' 'J B Lippincott and Co' 'Little Brown and Company' 'The Viking Press' 'The Viking Press' 'Charles Scribners Sons' 'Charles Scribners Sons' 'Alfaguara' 'Seix Barral' 'Seix Barral' 'Fondo de Cultura Economica' 'Fondo de Cultura Economica' 'Editorial Planeta' 'Editorial Planeta' 'Editorial La Oveja Negra' 'Editorial Sudamericana' 'Editorial Losada' 'Edicion Iberoamericana' 'Editorial Losada' 'Emece Editores' 'Editorial Sudamericana' 'Seix Barral' 'Editorial Planeta' 'Editorial Planeta' 'Editions Gallimard' 'Editions Gallimard' 'Editions Gallimard' 'Editions Gallimard' 'Editions de Minuit' 'Michel Levy Freres' 'Michel Levy Freres' 'Editions Grasset' 'A Lacroix Verboeckhoven and Cie' 'Charles Gosselin' 'Baudry' 'Baudry' 'Levasseur' 'Ambroise Dupont' 'Moskovski Rabochi' 'Olympia Press' 'G P Putnams Sons' 'Diogenes Verlag' 'S Fischer Verlag' 'S Fischer Verlag' 'S Fischer Verlag' 'S Fischer Verlag' 'Harper and Brothers' 'Putnams Monthly Magazine' 'Fowler and Wells' 'Poulet-Malassis et de Broise' 'Johann Neumeister' 'Demetrios Chalkokondyles' 'Demetrios Chalkokondyles' 'Aldina' 'Aldina' 'Aldina' 'Nicholas Ling' 'Edward Blount' 'Thomas Walkley' 'Nathaniel Butter' 'John Danter' 'Isaac Jaggard' 'George Allen and Unwin' 'George Allen and Unwin' 'George Allen and Unwin' 'Chilton Books' 'Gnome Press' 'Gnome Press' 'Ace Books' 'Bantam Books' 'William Heinemann' 'Editorial Caminho' 'Editorial Caminho' 'Editorial Caminho' 'Editorial Alfa' 'Editorial Alfa' 'Editorial Arca').
+
+anioLibro := #('1967' '1605' '1944' '1949' '1963' '1949' '1932' '1953' '1948' '1961' '1915' '1925' '1866' '1880' '1869' '1877' '1943' '1890' '1813' '1847' '1847' '1818' '1897' '1925' '1960' '1951' '1939' '1952' '1940' '1952' '2000' '1963' '1969' '1955' '1953' '2001' '2016' '1981' '1985' '1953' '1949' '1940' '1970' '1969' '1976' '1995' '1985' '1942' '1947' '1938' '1939' '1952' '1857' '1869' '1913' '1862' '1831' '1844' '1844' '1830' '1839' '1967' '1955' '1962' '1985' '1922' '1927' '1919' '1924' '1851' '1853' '1855' '1857' '1472' '1488' '1488' '1502' '1502' '1503' '1603' '1623' '1622' '1608' '1597' '1623' '1954' '1937' '1977' '1965' '1951' '1950' '1984' '1992' '1962' '1995' '1991' '1997' '1960' '1965' '1939').
+
+cantPaginasLibro := #('471' '1056' '224' '146' '608' '328' '288' '256' '160' '448' '128' '256' '672' '1056' '1225' '864' '96' '272' '416' '416' '576' '280' '418' '218' '336' '277' '464' '608' '496' '128' '528' '448' '704' '128' '176' '576' '925' '144' '496' '272' '144' '128' '160' '224' '288' '400' '336' '160' '288' '256' '240' '128' '448' '512' '4215' '1488' '576' '1276' '704' '576' '544' '448' '336' '304' '256' '160' '237' '176' '1008' '624' '96' '448' '288' '864' '448' '560' '96' '80' '96' '342' '112' '314' '256' '281' '160' '1178' '310' '365' '896' '256' '256' '320' '480' '192' '326' '448' '352' '224' '256' '112').
+
+codigoRevistas := #('0001-0782' '0028-0836' '0036-8075' '0098-3500' '0018-9162' '0018-9219' '1545-5963' '0098-7484' '0140-6736' '0028-4793' '0033-5770' '0003-4819' '0022-1007' '0002-9947' '0002-9327' '0002-9939' '0003-486X' '0022-2623' '0003-2700' '0002-7863' '0030-4018' '0031-9007' '0003-6951' '0021-9606' '0002-9505' '0004-637X' '0004-6256' '0035-8711' '0028-646X' '0012-9658' '0003-0147' '0022-0477' '0013-0133' '0033-5533' '0002-8282' '0022-3808' '0014-2921' '0020-6598' '0022-0531' '0034-6535').
+
+tituloRevistas := #('Communications of the ACM' 'Nature' 'Science' 'IEEE Software' 'Computer' 'Proceedings of the IEEE' 'IEEE Transactions on Software Engineering' 'JAMA' 'The Lancet' 'The New England Journal of Medicine' 'The Quarterly Review of Biology' 'Annals of Internal Medicine' 'Journal of Experimental Medicine' 'Transactions of the American Mathematical Society' 'American Journal of Mathematics' 'Proceedings of the American Mathematical Society' 'Annals of Mathematics' 'Journal of Medicinal Chemistry' 'Analytical Chemistry' 'Journal of the American Chemical Society' 'Optics Communications' 'Physical Review Letters' 'Applied Physics Letters' 'The Journal of Chemical Physics' 'The American Naturalist' 'The Astrophysical Journal' 'The Astronomical Journal' 'Monthly Notices of the Royal Astronomical Society' 'New Phytologist' 'Ecology' 'Evolution' 'Journal of Ecology' 'The Economic Journal' 'The Quarterly Journal of Economics' 'The American Economic Review' 'Journal of Political Economy' 'European Economic Review' 'International Economic Review' 'Journal of Economic Theory' 'The Review of Economics and Statistics').
+
+autoresRevista := #(#('ACM') #('Nature Portfolio') #('AAAS') #('IEEE Computer Society') #('IEEE Computer Society') #('IEEE') #('IEEE Computer Society') #('American Medical Association') #('Elsevier') #('Massachusetts Medical Society') #('University of Chicago Press') #('American College of Physicians') #('Rockefeller University Press') #('American Mathematical Society') #('Johns Hopkins University Press') #('American Mathematical Society') #('Princeton University') #('American Chemical Society') #('American Chemical Society') #('American Chemical Society') #('Elsevier') #('American Physical Society') #('AIP Publishing') #('AIP Publishing') #('University of Chicago Press') #('IOP Publishing') #('IOP Publishing') #('Oxford University Press') #('Wiley-Blackwell') #('Ecological Society of America') #('Society for the Study of Evolution') #('British Ecological Society') #('Oxford University Press') #('Oxford University Press') #('American Economic Association') #('University of Chicago Press') #('Elsevier') #('Wiley-Blackwell') #('Elsevier') #('MIT Press')).
+
+editorialRevista := #('Association for Computing Machinery' 'Springer Nature' 'American Association for the Advancement of Science' 'IEEE Computer Society' 'IEEE Computer Society' 'Institute of Electrical and Electronics Engineers' 'IEEE Computer Society' 'American Medical Association' 'Elsevier' 'Massachusetts Medical Society' 'University of Chicago Press' 'American College of Physicians' 'Rockefeller University Press' 'American Mathematical Society' 'Johns Hopkins University Press' 'American Mathematical Society' 'Department of Mathematics Princeton University' 'American Chemical Society' 'American Chemical Society' 'American Chemical Society' 'Elsevier' 'American Physical Society' 'AIP Publishing' 'AIP Publishing' 'University of Chicago Press' 'IOP Publishing' 'IOP Publishing' 'Oxford University Press' 'Wiley' 'Wiley' 'Oxford University Press' 'Wiley' 'Oxford University Press' 'Oxford University Press' 'American Economic Association' 'University of Chicago Press' 'Elsevier' 'Wiley' 'Elsevier' 'MIT Press').
+
+anioRevista :=#('2024' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024' '2022' '2023' '2024' '2023' '2024').
+
+paginasRevista := #('112' '96' '128' '88' '104' '160' '144' '72' '80' '64' '120' '92' '110' '180' '150' '130' '200' '140' '115' '175' '90' '85' '75' '160' '105' '190' '145' '210' '125' '135' '115' '100' '80' '95' '150' '110' '85' '90' '105' '120').
+
+numeroRevista :=#('8' '7945' '6680' '4' '2' '11' '6' '14' '10380' '19' '3' '7' '5' '1' '4' '9' '2' '8' '16' '22' '3' '12' '7' '18' '6' '2' '5' '1' '4' '9' '3' '8' '6' '4' '5' '1' '7' '2' '6' '3').
+
+mesRevista := #('agosto' 'febrero' 'marzo' 'julio' 'febrero' 'noviembre' 'junio' 'abril' 'marzo' 'mayo' 'septiembre' 'julio' 'mayo' 'enero' 'abril' 'septiembre' 'marzo' 'agosto' 'agosto' 'junio' 'marzo' 'diciembre' 'julio' 'noviembre' 'diciembre' 'febrero' 'mayo' 'enero' 'abril' 'septiembre' 'marzo' 'agosto' 'junio' 'noviembre' 'diciembre' 'febrero' 'octubre' 'abril' 'junio' 'agosto').
+
+"Empiezo a cargar los elementos dentro del catalogo"
+
+1 to:100 do:[:i|
+	libro := Libro isbn: (codigoLibros at:i) titulo: (titulosLibros at:i) autores: (autoresLibros at:i)  editorial: (editorialesLibros at: i)  anio: (anioLibro at:i)  paginas: (cantPaginasLibro at:i).
+	biblio catalogar: libro.
+].
+
+1 to:40 do:[:j|
+	libro := Revista issn: (codigoRevistas at:j) titulo:(autoresRevista at:j)  autores:(autoresRevista at:j)  editorial: (editorialRevista at:j) anio:(anioRevista at:j)  paginas:(paginasRevista at:j)  numero: (numeroRevista at:j) mes: (mesRevista at:j).
+	biblio catalogar: libro.
+	].
+
+1 to: nombresLectores size do:[:k|
+	lector := Lector numero: (1000+k) cuit: (cuitLectores at:k) nombre: (nombresLectores at:k)  apellido: (apellidosLectores at:k).
+	biblio agregarLector: lector.
+	].
+
+
+"ya terminado de cargar los usuarios, vamos a hacer algunos prestamos".
+i:=0.
+1 to: 20 do:[:p|
+	biblio prestar: (codigoLibros at: 5+p) a: (1000+4+p). 
+	].
+
+"chequeo si se prestaron"
+biblio prestamosVigentes .
+
+"como anda bien, vamos a revisar que sucede si vuelvo a prestar algo que ya estaba prestado."
+
+biblio prestar: (codigoLibros at:6) a: (1019).
+biblio prestamosVigentes .
+
+"se manda mensaje en el transcript. No agrega nada. Funciona bien."
+
+"vemos quienes tienen el libro del principito ."
+aux := biblio prestamoVigenteDe: (codigoLibros at:(titulosLibros  indexOf: 'El principito')).
+"como devuelve un prestamo, hay que usar metodos para saber exactamente el nombre."
+aux lector nombreCompleto .
+aux lector numero.
+
+"supongamos que ahora quisiera saber que libros se llevó el usuario 1019"
+biblio prestamosDe: 1019.
+
+"encontramos el prestamo correspondiente. Y si ahora le pedimos que revise el numero de un usuario que no existe?"
+
+biblio prestamosDe: 1095.
+
+"no devuelve nada,porque no existe."
+
+"entonces vamos a devolver algunos materiales"
+
+reloj avanzarDias: 5.
+
+"como pasaron 5 dias, los usuarios que devuelvan no deben ser morosos."
+
+aux := biblio devolver: (codigoLibros at: 6).
+aux lector.
+aux material.
+"como se puede ver, el lector santiago lopez devolvió el libro 1984 de George Orwell a los 5 dias de haberlo pedido prestado."
+
+aux lector esMoroso.
+
+"regresa falso pq no se demoró."
+
+"que sucede si se demora?"
+
+reloj avanzarDias: 30.
+
+aux := biblio devolver: (codigoLibros at: 9).
+aux lector.
+aux material.
+"como se puede ver, isabella perez devulvió el libro el tunel, de ernesto sabato, pasado 35 dias desde que lo sacó porestado, por lo que fue marcada como morosa automaticamente."
+
+aux lector esMoroso .
+
+"que pasa ahora, siendo morosa, puede retirar libros?"
+
+biblio prestar: (codigoLibros at: 77) a: (aux lector numero).
+
+"como se puede ver en el transcript, me marca que la persona es morosa, por lo que no puede llevarse nda"
+
+"supongamos que está muy arrepentida y paga la fianza, entonces la biblio tiene que darla de alta. "
+
+biblio rehabilitar: aux lector numero.
+
+"ahora si puede llevarse algo?"
+biblio prestar: (codigoLibros at: 77) a: (aux lector numero).
+
+"si, se puede llevar el lirbo, así que funciona bien."
+
+"que sucede con todos aquellos que todavía no devolvieron el libro? "
+
+aux:= biblio prestamosVigentes.
+
+"como podemos ver, hay 19 prestamos vigentes. De los cuales 18 llevan por lo menos más de 35 dias."
+
+"los usuarios estan marcado como morosos?"
+
+
+(aux at:6) lector esMoroso .
+
+"no, porque solo se los marca moroso si lo devuelve."
+
+"entonces si un lector que no devolvió el libro no fue marcado como moroso, puede venir a pedir otro linro?"
+
+biblio prestar: (codigoLibros at:66) a: (aux at:6)lector numero.
+
+"si, no hubo problema. Hasta que no lo devuelva, puede llevarse todos lo que quiera."
+
+biblio prestamosDe: (aux at:6)lector numero.
+
+"podria tranquilamente devolver el ultimo que pidio y seguiria sin ser moroso."
+
+reloj avanzarDias: 1.
+
+biblio devolver: (codigoLibros at:66).
+(aux at:6) lector esMoroso .
+
+"no fue castigado por no devolver."
+
+
+
